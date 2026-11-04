@@ -1,0 +1,29 @@
+h1 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  border-radius: 80px;
+}
+p {
+  color: #666;
+  padding: 5px;
+}
+
+
+.destaque {
+  background-color: yellow;
+  font-weight: bold;
+  border-radius:10px;
+  padding: 10px;
+}
+
+.tela-cheia {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Joga a imagem para trás de todo o conteúdo */
+}
+
