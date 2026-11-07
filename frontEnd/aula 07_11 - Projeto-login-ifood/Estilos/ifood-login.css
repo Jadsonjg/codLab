@@ -1,0 +1,51 @@
+body {
+    background-color: red;
+    margin: 0;
+}
+
+    header{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space;
+        padding: 0 0px;
+        nav {
+            /* justify-content: space-around; */
+            gap: 220px;
+            font-size: large;
+            font-weight: 400;
+        }
+    }
+
+    .logo-header {
+    height: 10%;
+    width: 10%;
+    }
+
+    .localizacao {
+    margin-left: 2px;
+    img{
+        height: 50px;
+        width: 50px;
+    
+    };
+    }
+    .botoes-header{
+
+    }
+    .botao-vermelho {
+
+    }
+
+    main {
+
+    }
+    .texto-principal{
+
+    }
+    .cadastro{
+
+    }
+    .botao-cadastro{
+        
+    }
