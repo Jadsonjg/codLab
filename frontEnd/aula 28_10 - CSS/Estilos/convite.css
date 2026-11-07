@@ -1,0 +1,85 @@
+html{
+  font-size: 16px
+}
+
+body {
+  margin: 0;                 /* Remove as margens padrão do navegador */
+  min-height: 100vh;         /* Garante que o body ocupe toda a altura da tela */
+  display: flex;             /* Ativa o Flexbox */
+  justify-content: center;   /* Centraliza horizontalmente */
+  align-items: center;       /* Centraliza verticalmente */
+  background-color: #3ee21d66; /* Cor de fundo opcional apenas para contraste */
+  z-index: -2;
+}
+.dino{
+  z-index: -1;
+  height: 2px;
+  width: 2px;
+}
+  
+.convite {
+  position: relative; /* Necessário para segurar a imagem dentro do convite */
+  overflow: hidden;   /* Garante que a imagem respeite o border-radius */
+  
+  /* Deixamos apenas o gradiente no fundo principal */
+  background: linear-gradient(to bottom, rgba(247, 117, 2, 0.9), rgba(244, 182, 128, 0.9));
+  
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  box-shadow: 0 0 50px rgba(255, 140, 0, 0.6);
+  z-index: 1;
+}
+
+/* Camada exclusiva para os dinossauros */
+.convite::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* Ocupa 100% de largura e altura do .convite */
+  
+  background-image: url('../Imagens/artpoin-dinossauro-imagem-sem-fundo11.png');
+  background-repeat: repeat;
+  background-size: 80px;
+  
+  opacity: 0.3; /* Ajuste aqui a transparência (de 0.1 a 0.9) */
+  z-index: -1;  /* Mantém os dinossauros atrás do texto, mas na frente do gradiente */
+}
+
+
+.foto {
+  width: 100%;       /* Ocupa toda a largura disponível dentro do .convite-container */
+  height: 300px;     /* Define uma altura fixa para o espaço da imagem (você pode ajustar) */
+  object-fit: cover; /* Faz a imagem cobrir esse espaço perfeitamente sem distorcer ou esticar */
+  border-radius: 150px; /* (Opcional) Arredonda os cantos da imagem para combinar com o cartão */
+  margin-bottom: 15px; /* Um respiro para o texto abaixo */
+ }
+
+.subtitulo {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 10px;
+}
+
+.nome {
+  font-family: "Chewy", system-ui;
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-style: bold;
+}
+.linha {
+  border: none;
+  background-color: #000000;
+  height: 2px;
+  width: 300px
+}
+
+.fundo-branco {
+  background-color: white;
+  border-radius: 20px;
+}
+
+
