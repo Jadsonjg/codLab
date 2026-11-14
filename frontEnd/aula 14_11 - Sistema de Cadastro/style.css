@@ -1,0 +1,56 @@
+
+.corpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title  {
+display: flex;
+justify-content: center;
+padding: 1rem;
+}
+
+.form {
+display: flex;
+flex-direction: column ;
+padding: 2rem;
+gap: 0.2rem;
+}
+
+.conffirm-button {
+margin: 2rem;
+padding: 0.4rem;
+background-color: aquamarine;
+border-radius: 10rem;
+}
+
+.etiqueta {
+    font-size: 0.8rem;
+}
+
+.campo {
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.list {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.cadastros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.trash {
+    display: flex;
+}
