@@ -1,0 +1,51 @@
+body {
+      font-family: Arial, sans-serif;
+      background: #f2efec;
+      color: #1d1d1b;
+      padding: 40px;
+    }
+
+    form {
+      background: #ffffff;
+      max-width: 420px;
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border: 2px solid #cccccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #f18c25;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #saida {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    /* aparência de erro: o JavaScript liga e desliga essa classe */
+    .erro {
+      color: #c0392b;
+      font-weight: bold;
+    }
