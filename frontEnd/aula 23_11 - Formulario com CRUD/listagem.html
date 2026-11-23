@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+</head>
+<body>
+  <h1>Meus Contatos</h1>
+  <button onclick="cadastrar()">
+    Adicionar Novo Contato
+  </button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+  </table>
+
+  <div id="sidebar" style="display: none;">
+    <h2>Novo Contato</h2>
+    <input id="nome" placeholder="Nome">
+    <input id="telefone" placeholder="Telefone">
+    <input id="email" placeholder="E-mail">
+    <input id="cidade" placeholder="Cidade">
+    <button id="salvar">Salvar</button>
+    <button onclick="esconderFormulario()">Cancelar</button>
+  </div>
+  <p id="saida"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
