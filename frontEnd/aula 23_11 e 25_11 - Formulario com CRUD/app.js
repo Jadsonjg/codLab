@@ -1,8 +1,8 @@
 let contatos = [];
 const barraLateral = document.getElementById("sidebar");
-const salvar = document.getElementById("salvar");
-let passou 
+let passou = ""
 
+//Busca o id dos inputs e retorna um objeto.
 function buscarCamposFormulario() {
     const nome = document.getElementById("nome").value;
     const telefone = document.getElementById("telefone").value;
@@ -11,29 +11,21 @@ function buscarCamposFormulario() {
 
     return { nome, telefone, email, cidade };
 }
-
+//Seta a estilização do sidebar do cadastro, aqui escolhemos como ela é mostrada.
 function mostrarFormulario() {
-    barraLateral.style.display = "inline";
-};
-
-
-function esconderFormulario() {
-    barraLateral.style.display = "none";
-};
-
-function cadastrar() {
-    salvar.onclick = adicionarContato;
     document.getElementById("nome").value = "";
     document.getElementById("telefone").value = "";
     document.getElementById("email").value = "";
     document.getElementById("cidade").value = "";
 
-    mostrarFormulario();
-
-}
-
+    barraLateral.style.display = "inline";
+};
+//Seta a estilização do sidebar do cadastro, aqui escondemos ela.
+function esconderFormulario() {
+    barraLateral.style.display = "none";
+};
+//Cria um array de objetos, após validação, adicionando os elementos adicionados nos inputs a variavel "contatos".
 function adicionarContato() {
-
 
     const novoContato = buscarCamposFormulario();
 
@@ -43,12 +35,11 @@ function adicionarContato() {
     }
     contatos.push(novoContato);
 
-    renderiziarContatos();
+    exibirContatos();
     esconderFormulario();
-
 }
-
-function renderiziarContatos() {
+//Usa o .creatElement e o .appendChild, para estruturar e mostrar na tela as informações do array de objetos "contatos".
+function exibirContatos() {
     const corpoTabela = document.getElementById("lista");
     corpoTabela.innerHTML = "";
 
@@ -60,6 +51,9 @@ function renderiziarContatos() {
 
         const celulaTelefone = document.createElement("td");
         celulaTelefone.textContent = contatos.telefone;
+
+        const celulaEmail = document.createElement("td");
+        celulaEmail.textContent = contatos.email;
 
         const celulaAcoes = document.createElement("td");
 
@@ -76,6 +70,7 @@ function renderiziarContatos() {
 
         linha.appendChild(celulaNome);
         linha.appendChild(celulaTelefone);
+        linha.appendChild(celulaEmail);
         linha.appendChild(celulaAcoes);
         corpoTabela.appendChild(linha);
     })
@@ -90,25 +85,25 @@ function editarContato(index) {
     document.getElementById("email").value = contato.email;
     document.getElementById("cidade").value = contato.cidade;
 
+    const salvarButton = document.getElementById("salvar");
+
     indiceEditando = index;
-    salvar.onclick = salvarEdicao
+    salvarButton.onclick = salvarEdicao
     mostrarFormulario();
 }
 
 function salvarEdicao() {
     contatos[indiceEditando] = buscarCamposFormulario()
     validar();
-    renderiziarContatos();
+    exibirContatos();
     esconderFormulario();
     indiceEditando = null;
 
 }
 
-
-
 function removerContato(index) {
     contatos.splice(index, 1);
-    renderiziarContatos();
+    exibirContatos();
 }
 
 function validar() {
