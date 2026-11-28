@@ -168,4 +168,8 @@ function validar() {
     passou = true;
 }
 
+function conversaoTexto () {
+    const contatosTexto = JSON.stringify(contatos);
+}
+
 

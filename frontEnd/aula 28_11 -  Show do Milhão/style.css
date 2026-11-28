@@ -1,0 +1,15 @@
+body {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.input-cadastro {
+    width: 32rem;
+    height: 2rem;
+    font-size: large;
+    border-radius: 8px;
+}

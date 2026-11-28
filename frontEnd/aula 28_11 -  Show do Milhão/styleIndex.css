@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: aliceblue;
+}
+
+.boas-vindas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px
+}
+
+.botao-inicio {
+    padding: 2rem;
+    width: 16rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: rgb(6, 232, 6);
+    border-radius: 2rem;
+    
+}
+
+.subtitulo-botao {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem
+}
